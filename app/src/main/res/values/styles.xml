@@ -1,0 +1,69 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <item name="android:background">#fff59d</item>
+
+    </style>
+
+    <style name="backgroundTheme">
+        <item name="android:background">#fff59d</item>
+    </style>
+
+
+    <style name="appBarTheme" parent="Theme.AppCompat.NoActionBar">
+       <!-- <item name="android:background">#edd265</item>-->
+        <item name="android:background">#ffd54f</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:textColorSecondary">#FFFFFF</item>
+
+    </style>
+
+    <style name="appBarText" parent="@android:style/TextAppearance.DeviceDefault.WindowTitle">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="preferencesListStyle">
+        <item name="android:background">#f0f4c3</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="MyTheme" parent="Theme.AppCompat.Light">
+        <item name="android:textColor">#242320</item>
+        <item name="android:background">@color/unselectedQueryResultBackground</item>
+
+    </style>
+
+    <style name="queryResultTheme" parent="Theme.AppCompat.Light">
+
+        <item name="android:background">@color/unselectedQueryResultBackground</item>
+      <item name="android:textColor">#212121</item>
+    </style>
+
+    <color name="selectedQueryResultBackground">#f1c651</color>
+
+    <color name="unselectedQueryResultBackground">#f9f0a6</color>
+
+    <color name="compareRowEven">#ffe082</color>
+    <color name="compareRowOdd">#fff59d</color>
+    <color name="textColor1">#212121</color>
+    <color name="linkTextColor">#304ffe</color>
+   <!-- <color name="unselectedQueryResultBackground">#faEE8D</color>-->
+
+
+    <style name="AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--
+    <style name="textAppearanceSmall" parent="@android:style/Widget.Holo.Light.ActionBar">
+
+        <item name="android:textColor">#242320</item>
+
+    </style>
+-->
+
+
+</resources>

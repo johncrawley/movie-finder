@@ -1,0 +1,173 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    style="@style/MyTheme">
+
+    <!--tools:context=".MainActivity"-->
+
+    <include layout="@layout/app_toolbar" android:id="@+id/included_toolbar"/>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_below="@+id/included_toolbar"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp"
+        android:id="@+id/linearLayout_input_fields">
+
+
+        <TextView android:text="@string/search_for_results_text" android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="12dp"
+            android:id="@+id/textView" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/search_label_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="@string/search_label_1"
+                android:layout_gravity="center_vertical|top"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:maxLines="1"
+                android:height="48dp" />
+
+            <EditText
+                android:id="@+id/editText1"
+                android:layout_width="0dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginStart="7dp"
+                android:layout_marginEnd="12dp"
+                android:layout_height="44dp"
+                android:background="@android:drawable/editbox_background"
+                android:inputType="textPersonName"
+                android:singleLine="true"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/label_text_no_results_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:visibility="invisible"
+            android:text="@string/no_query_results_text"
+            android:layout_gravity="center_vertical|end"
+            android:gravity="center"
+            android:textSize="@dimen/abc_text_size_caption_material"
+            android:layout_marginTop="6dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/search_label_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="@string/search_label_2"
+                android:layout_gravity="center_vertical|top"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:maxLines="1"
+                android:height="48dp" />
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="0dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginStart="7dp"
+                android:layout_marginEnd="12dp"
+                android:layout_height="44dp"
+                android:background="@android:drawable/editbox_background"
+                android:inputType="textPersonName"
+                android:singleLine="true"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/label_text_no_results_2"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:text="@string/no_query_results_text"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="center_vertical|end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textSize="@dimen/abc_text_size_caption_material"
+            android:layout_marginTop="6dp" />
+
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/find_button_text"
+            android:id="@+id/findButton"
+            android:layout_marginTop="77dp"
+            android:clickable="true"
+            android:background="@drawable/search_button_selector"
+
+            android:focusableInTouchMode="false"
+            android:focusable="true"
+            android:enabled="false"
+            android:layout_gravity="center"
+            android:shadowColor="#8d6925" />
+
+    </LinearLayout>
+
+
+    <include
+        layout="@layout/imdb_statement"
+        android:id="@+id/includedLayout1"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        />
+
+</RelativeLayout>

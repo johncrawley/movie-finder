@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Preference android:title="@string/clear_cache_button_title"
+        android:key="@string/clear_cache_button_key"
+        android:summary="Remove saved results from memory."/>
+</PreferenceScreen>

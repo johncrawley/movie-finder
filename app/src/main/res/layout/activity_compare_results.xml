@@ -1,0 +1,152 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:theme="@style/MyTheme"
+    tools:context="com.jacsstuff.joesfilmfinder.activities.CompareResultsActivity">
+
+
+    <include layout="@layout/app_toolbar" android:id="@+id/included_toolbar"/>
+
+
+    <LinearLayout
+        android:layout_above="@+id/newSearchButton"
+        android:layout_below="@+id/included_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:id="@+id/linearLayout2">
+            <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:layout_below="@+id/included_toolbar"
+                android:columnCount="2"
+                android:id="@+id/compare_rsults_layout1"
+                android:layout_alignParentBottom="true">
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:weightSum="2"
+                    android:id="@+id/profilePicsLayout">
+
+                    <ImageView
+                        android:id="@+id/imageViewActor1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="top"/>
+                    <ImageView
+                        android:id="@+id/imageViewActor2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="true"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="top" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    android:id="@+id/namesLayout"
+                    android:layout_weight="1"
+                    android:layout_margin="8dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text=""
+                        android:id="@+id/actor1Name"
+                        android:layout_margin="5dp"
+                        android:layout_gravity="center_horizontal|top"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text=""
+                        android:id="@+id/actor2Name"
+                        android:layout_margin="5dp"
+                        android:layout_gravity="center_horizontal|top"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal" />
+                </LinearLayout>
+
+
+               <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/results_layout"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1">
+
+                   <include layout="@layout/horizontal_divider"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text=""
+                        android:id="@+id/results_count_text"
+                        android:layout_margin="12dp"
+                        android:visibility="gone"
+                        android:layout_gravity="center_horizontal|top"
+                        android:layout_marginTop="20dp" />
+
+                </LinearLayout>
+
+                <TableLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/commonMovieResultsLayout">
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="12dp" />
+                </TableLayout>
+
+            </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/button_bottom_margin"
+            android:text="@string/new_search_button"
+            android:visibility="gone"
+            android:id="@+id/newSearchButton"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
